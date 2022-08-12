@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "license": "MIT",
   "scripts": {
-    "test": "hardhat coverage",
+    "test": "ENV=test hardhat coverage",
     "lint": "eslint . --ext .ts --fix",
     "prettier": "prettier --write 'contracts/**/*.sol'",
     "lint:fix": "yarn run lint && yarn run prettier",
