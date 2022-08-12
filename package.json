@@ -6,7 +6,8 @@
     "test": "hardhat coverage",
     "lint": "eslint . --ext .ts --fix",
     "prettier": "prettier --write 'contracts/**/*.sol'",
-    "lint:fix": "yarn run lint && yarn run prettier"
+    "lint:fix": "yarn run lint && yarn run prettier",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
