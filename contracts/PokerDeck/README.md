@@ -6,7 +6,7 @@
 
 # PokerDeck
 
-Algorithm-generated NFTs inspired by poker decks.
+Algorithm-generated NFTs inspired by Poker hands.
 
 # Explanation
 
