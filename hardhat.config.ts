@@ -1,14 +1,15 @@
 /**
- * Config dotenv
+ * Import libraries
  */
-import "dotenv";
-
-/**
- * Import hardhat libraries
- */
+import dotenv from "dotenv";
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import "tsconfig-paths/register";
+
+/**
+ * Config dotenv first
+ */
+dotenv.config();
 
 /**
  * Default hardhat configs

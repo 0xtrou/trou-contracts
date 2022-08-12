@@ -1,1 +1,15 @@
-# PokerDeck 
+#
+
+<center>
+    <img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHZpZXdCb3g9IjAgMCAzNTAgMzUwIj48c3R5bGU+LmJhc2UgeyBmaWxsOiB3aGl0ZTsgZm9udC1mYW1pbHk6IHNlcmlmOyBmb250LXNpemU6IDcwcHg7IH08L3N0eWxlPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9ImJsYWNrIiAvPjx0ZXh0IHg9IjEwIiB5PSIxNjUiIGNsYXNzPSJiYXNlIj7wn4OSPC90ZXh0Pjx0ZXh0IHg9IjgwIiB5PSIxNjUiIGNsYXNzPSJiYXNlIj7wn4OCPC90ZXh0Pjx0ZXh0IHg9IjE1MCIgeT0iMTY1IiBjbGFzcz0iYmFzZSI+8J+DjjwvdGV4dD48dGV4dCB4PSIyMjAiIHk9IjE2NSIgY2xhc3M9ImJhc2UiPvCfg4M8L3RleHQ+PHRleHQgeD0iMjkwIiB5PSIxNjUiIGNsYXNzPSJiYXNlIj7wn4OLPC90ZXh0Pjx0ZXh0IGNsYXNzPSJiYXNlIiB5PSIzMDAiIHN0eWxlPSJmb250LXNpemU6IDEycHg7Zm9udC1mYW1pbHk6IHNlcmlmOyIgeD0iOTUiPsKpIFBva2VyRGVjay4gQWxsIHJpZ2h0cyByZXNlcnZlZC48L3RleHQ+PC9zdmc+" width="500" height="500"/>
+</center>
+
+# PokerDeck
+
+Algorithm-generated NFTs inspired by poker decks.
+
+# Deploy
+
+```bash
+npx hardhat run scripts/PokerDeck/deploy.ts --network <network-name-in-hardhat-config>
+```

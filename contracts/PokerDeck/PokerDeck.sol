@@ -21,9 +21,10 @@ contract PokerDeck is ERC721Enumerable, ReentrancyGuard, Ownable {
 	}
 
 	mapping(uint256 => MetaInfo) public metaInfo;
-	address payable public taxPool;
 
+	address payable public taxPool;
 	uint256 public mintFee = 50 ether;
+
 	string[] private cards = [
 		unicode"🂠",
 		unicode"🂡",
