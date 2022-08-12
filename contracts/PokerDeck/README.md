@@ -10,7 +10,7 @@ Algorithm-generated NFTs inspired by Poker hands.
 
 # Explanation
 
-Everytime user mint with a based-fee (50 ether/you can change to any price you want), the PokerDeck contract will generate a unique PokerDeck, includes 5 cards.
+Everytime user mint with a based-fee (50 ether/you can change to any price you want), the PokerDeck contract will generate a unique Poker hand, includes 5 cards.
 The rarity is defined by the value of the hand, similar to when evaluating a Poker hand.
 
 # Deploy
