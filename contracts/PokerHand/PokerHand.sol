@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import "./Helper.sol";
 
-contract PokerDeck is ERC721Enumerable, ReentrancyGuard, Ownable {
+contract PokerHand is ERC721Enumerable, ReentrancyGuard, Ownable {
 	using SafeMath for uint256;
 
 	struct MetaInfo {
@@ -198,7 +198,7 @@ contract PokerDeck is ERC721Enumerable, ReentrancyGuard, Ownable {
 			abi.encodePacked(
 				'</text><text class="base" y="300" style="font-size: 12px;font-family: serif;" x="95">',
 				unicode"©",
-				" PokerDeck. All rights reserved.</text></svg>"
+				" PokerHand. All rights reserved.</text></svg>"
 			)
 		);
 
@@ -221,9 +221,9 @@ contract PokerDeck is ERC721Enumerable, ReentrancyGuard, Ownable {
 			bytes(
 				string(
 					abi.encodePacked(
-						'{"name": "Deck #',
+						'{"name": "Hand #',
 						Helper.toString(tokenId),
-						'", "description": "PokerDeck (Deck) is the first algorithm-generated NFTs that was built on blockchain. The NFT art is inspired by a poker nut hand, and sometimes the feeling playing poker is similar to the feeling venturing to the blockchain world. This NFT was signed by ',
+						'", "description": "PokerHand (Hand) is the first algorithm-generated NFTs that was built on blockchain. The NFT art is inspired by a poker nut hand, and sometimes the feeling playing poker is similar to the feeling venturing to the blockchain world. This NFT was signed by ',
 						Helper.addressToString(metaInfo[tokenId].signedBy),
 						'.", "image": "data:image/svg+xml;base64,',
 						Helper.encode(bytes(output)),
@@ -266,13 +266,13 @@ contract PokerDeck is ERC721Enumerable, ReentrancyGuard, Ownable {
 
 		require(
 			tokenId <= 8888,
-			"Error: supply for buy is limited at 8,889 PokerDeck"
+			"Error: supply for buy is limited at 8,889 PokerHand"
 		);
 
 		_mintPoker(msg.sender, tokenId);
 	}
 
-	constructor() ERC721("PokerDeck", "Deck") Ownable() {
+	constructor() ERC721("PokerHand", "Hand") Ownable() {
 		taxPool = payable(owner());
 	}
 }

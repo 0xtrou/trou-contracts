@@ -11,7 +11,7 @@ async function main() {
   /**
    * Deploy poker deck contract with linked Helper library
    */
-  const PokerDeck = await ethers.getContractFactory("PokerDeck", {
+  const PokerDeck = await ethers.getContractFactory("PokerHand", {
     libraries: {
       Helper: helperContract.address,
     },
@@ -20,7 +20,7 @@ async function main() {
   const pokerDeck = await PokerDeck.deploy();
   await pokerDeck.deployed();
 
-  console.log("Deployed PokerDeck contract at:", pokerDeck.address);
+  console.log("Deployed PokerHand contract at:", pokerDeck.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

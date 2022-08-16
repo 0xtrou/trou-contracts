@@ -4,19 +4,19 @@
     <img src="./image.jpg" width="500" height="500"/>
 </center>
 
-# PokerDeck
+# PokerHand
 
 Algorithm-generated NFTs inspired by Poker hands.
 
 # Explanation
 
-Everytime user mint with a based-fee (50 ether/you can change to any price you want), the PokerDeck contract will generate a unique Poker hand, includes 5 cards.
+Everytime user mint with a based-fee (50 ether/you can change to any price you want), the PokerHand contract will generate a unique Poker hand, includes 5 cards.
 The rarity is defined by the value of the hand, similar to when evaluating a Poker hand.
 
 # Deploy
 
 ```bash
-npx hardhat run scripts/PokerDeck/deploy.ts --network <network-name-in-hardhat-config>
+npx hardhat run scripts/PokerHand/deploy.ts --network <network-name-in-hardhat-config>
 ```
 
 # License
