@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "test": "ENV=test hardhat coverage",
-    "lint": "eslint . --ext .ts --fix",
+    "lint": "hardhat compile && eslint . --ext .ts --fix",
     "prettier": "prettier --write 'contracts/**/*.sol'",
     "lint:fix": "yarn run lint && yarn run prettier",
     "prepare": "husky install"

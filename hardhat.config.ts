@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 import "tsconfig-paths/register";
+import "@openzeppelin/hardhat-upgrades";
 
 /**
  * Config dotenv first
@@ -15,11 +16,19 @@ dotenv.config();
  * Default hardhat configs
  */
 const config: HardhatUserConfig = {
-  solidity: "0.8.16",
+  solidity: {
+    version: "0.8.16",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 2000,
+      },
+    },
+  },
 };
 
 /**
- * Import private key
+ * Extract env vars
  */
 const privateKey = process.env.PRIVATE_KEY || "";
 const testEnv = process.env.ENV === "test";
@@ -79,6 +88,17 @@ if (!testEnv && privateKey) {
       gasPrice: 0,
       chainId: 5722,
     },
+  };
+}
+
+/**
+ * Load etherscan key
+ */
+const etherscanKey = process.env.ETHERSCAN_KEY || "";
+
+if (etherscanKey) {
+  config.etherscan = {
+    apiKey: etherscanKey,
   };
 }
 
