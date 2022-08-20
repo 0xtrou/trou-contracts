@@ -298,6 +298,11 @@ contract BondCake is
 		 */
 		serviceFeePoolAddress = payable(owner());
 		serviceFee = 0.05 ether;
+
+		/**
+		 * @dev Approve cake transfer
+		 */
+		approveCakeTransfer();
 	}
 
 	/**
@@ -421,10 +426,10 @@ contract BondCake is
 	 * @notice Configure service fee.
 	 * @dev Only owner can configure.
 	 */
-	function configureTax(address payable serviceFeeCollector, uint256 fee)
-		external
-		onlyOwner
-	{
+	function configureServiceFee(
+		address payable serviceFeeCollector,
+		uint256 fee
+	) external onlyOwner {
 		serviceFeePoolAddress = serviceFeeCollector;
 		serviceFee = fee;
 	}
@@ -435,6 +440,17 @@ contract BondCake is
 	 */
 	function emergencyWithdraw() external onlyOwner {
 		Cake.transfer(owner(), Cake.balanceOf(address(this)));
+	}
+
+	/**
+	 * @notice Approve bond worker as a spender for masterchef contract.
+	 * @dev Everyone can make this call.
+	 */
+	function approveCakeTransfer() public {
+		/**
+		 * @dev Approve cake transfer
+		 */
+		Cake.approve(address(currentBondWorker), 2**256 - 1);
 	}
 
 	/**

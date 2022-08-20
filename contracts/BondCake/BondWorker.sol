@@ -75,7 +75,10 @@ contract BondWorker is Ownable, ReentrancyGuard {
 	 * @param depositedAmount {uint256} - the amount user wants to deposit.
 	 * @param lockDuration {uint256} - the lock duration in seconds.
 	 */
-	function deposit(uint256 depositedAmount, uint256 lockDuration) external {
+	function deposit(uint256 depositedAmount, uint256 lockDuration)
+		external
+		onlyOwner
+	{
 		/**
 		 * @dev Transfer Cake from MasterChef to this.
 		 */
@@ -90,7 +93,7 @@ contract BondWorker is Ownable, ReentrancyGuard {
 	/*
 	 * @notice Withdraw native CAKE.
 	 */
-	function withdraw() external returns (uint256) {
+	function withdraw() external onlyOwner returns (uint256) {
 		/**
 		 * @dev Calculate balance before withdrawing Cake.
 		 */
