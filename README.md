@@ -11,7 +11,7 @@ Therefore, hopefully the contracts will be delivered transparent, secured and re
 
 - [Lock](./contracts/Lock): just a sample contract, will be removed soon lol
 - [PokerHand](./contracts/PokerHand): an algorithm-generated NFT inspired by Poker hands.
-- BondCake: an innovative bonding mechanism relied on Cake compound staking (in progress)
+- [BondCake](./contracts/BondCake): an innovative bonding mechanism relied on Cake compound staking (in progress)
 
 # Test
 
