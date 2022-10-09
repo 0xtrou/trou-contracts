@@ -20,6 +20,7 @@ async function main() {
   const pokerDeck = await PokerDeck.deploy();
   await pokerDeck.deployed();
 
+  await pokerDeck.mint({ value: ethers.utils.parseEther("50") });
   console.log("Deployed PokerHand contract at:", pokerDeck.address);
 }
 
